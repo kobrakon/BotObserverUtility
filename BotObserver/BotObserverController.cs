@@ -18,7 +18,7 @@ namespace BotObserver
                 {
                     var gameWorld = Singleton<GameWorld>.Instance;
                     Plugin.logger.LogInfo($"Bot Data Log Request Handled on Frame {Mathf.Floor(FrameCount)}");
-                    foreach (Player bot in gameWorld.RegisteredPlayers)
+                    foreach (Player bot in gameWorld.AllPlayers)
                     {
                         AccessibleBotData.BotPosition = bot.Transform.position;
                         AccessibleBotData.BotName = bot.ProfileId;
